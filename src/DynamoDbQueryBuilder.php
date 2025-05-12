@@ -76,6 +76,13 @@ class DynamoDbQueryBuilder
      */
     protected $index;
 
+    /**
+     * "ConsistentRead" parameter.
+     *
+     * @var bool
+     */
+    protected $consistentRead = true;
+
     public function __construct(DynamoDbModel $model)
     {
         $this->model = $model;
@@ -127,6 +134,19 @@ class DynamoDbQueryBuilder
     public function offset($value)
     {
         throw new NotSupportedException('Skip/Offset is not supported. Consider using after() instead');
+    }
+
+    /**
+     * Set the "ConsistentRead" value of the query.
+     *
+     * @param  bool  $value
+     * @return $this
+     */
+    public function setConsistentRead($value)
+    {
+        $this->consistentRead = $value;
+
+        return $this;
     }
 
     /**
@@ -461,7 +481,7 @@ class DynamoDbQueryBuilder
 
         $query = DynamoDb::table($this->model->getTable())
             ->setKey(DynamoDb::marshalItem($this->model->getKeys()))
-            ->setConsistentRead(true);
+            ->setConsistentRead($this->consistentRead);
 
         if (!empty($columns)) {
             $query
