@@ -82,6 +82,21 @@ class DynamoDbCompositeModelTest extends DynamoDbNonCompositeModelTest
         $this->assertEquals($seedName, $item->name);
     }
 
+    public function testFindRecordWithoutConsistentRead()
+    {
+        $seed = $this->seed();
+        $seedId = Arr::get($seed, 'id.S');
+        $seedId2 = Arr::get($seed, 'id2.S');
+        $seedName = Arr::get($seed, 'name.S');
+
+        $item = $this->testModel->setConsistentRead(false)->find(['id' => $seedId, 'id2' => $seedId2]);
+
+        $this->assertNotEmpty($item);
+        $this->assertEquals($seedId, $item->id);
+        $this->assertEquals($seedId2, $item->id2);
+        $this->assertEquals($seedName, $item->name);
+    }
+
     public function testFindMultiple()
     {
         $hash = ['foo', 'foo1'];
