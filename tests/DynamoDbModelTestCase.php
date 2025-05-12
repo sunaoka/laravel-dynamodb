@@ -5,11 +5,11 @@ namespace BaoPham\DynamoDb\Tests;
 use Aws\DynamoDb\Marshaler;
 
 /**
- * Class DynamoDbModelTest
+ * Class DynamoDbModelTestCase
  *
  * @package BaoPham\DynamoDb\Tests
  */
-abstract class DynamoDbModelTest extends DynamoDbTestCase
+abstract class DynamoDbModelTestCase extends DynamoDbTestCase
 {
     /**
      * @var \BaoPham\DynamoDb\DynamoDbModel
