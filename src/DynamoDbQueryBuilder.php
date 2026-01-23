@@ -167,7 +167,7 @@ class DynamoDbQueryBuilder
      *
      * @return $this
      */
-    public function after(DynamoDbModel $after = null)
+    public function after(?DynamoDbModel $after = null)
     {
         if (empty($after)) {
             $this->lastEvaluatedKey = null;
@@ -904,7 +904,7 @@ class DynamoDbQueryBuilder
      * @param  array|null  $scopes
      * @return $this
      */
-    public function withoutGlobalScopes(array $scopes = null)
+    public function withoutGlobalScopes(?array $scopes = null)
     {
         if (is_array($scopes)) {
             foreach ($scopes as $scope) {
