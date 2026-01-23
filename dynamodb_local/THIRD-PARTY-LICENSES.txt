@@ -20,15 +20,15 @@ The Amazon DynamoDB Local includes the following third-party software/licensing:
 ** Apache-httpComponents-HttpClient; version 4.5.x -- https://hc.apache.org/httpcomponents-client-ga/
 ** servlet-api; version 3.1 -- https://tomcat.apache.org/tomcat-8.0-doc/servletapi/javax/servlet/package-summary.html
 ** netty-all; version 4.1 -- https://netty.io/index.html
-** google-guava; version 33.0.0-jre- -- https://www.apache.org/licenses/LICENSE-2.0.txt
+** google-guava; version 33.4.x-jre- -- https://www.apache.org/licenses/LICENSE-2.0.txt
 ** jetty; version 12.0.x -- https://github.com/eclipse/jetty.project
 ** log4j-core; version 2.17.x -- https://logging.apache.org/log4j/2.x/log4j-core/
-** jackson-annotations; version 2.12.x -- https://github.com/FasterXML/jackson-annotations
-** Jackson; version 2.12 -- http://github.com/FasterXML/jackson
-** jackson-core; version 2.12.x -- https://github.com/FasterXML/jackson-core
-** jackson-datatype-jsr310; version 2.12.x -- https://github.com/FasterXML/jackson-modules-java8
-** Jackson-databind; version 2.12.x -- https://github.com/FasterXML/jackson-databind
-** Checker Qual; version 3.43.0 --  https://opensource.org/license/mit/
+** jackson-annotations; version 2.18.x -- https://github.com/FasterXML/jackson-annotations
+** Jackson; version 2.18.x -- http://github.com/FasterXML/jackson
+** jackson-core; version  2.18.x -- https://github.com/FasterXML/jackson-core
+** jackson-datatype-jsr310; version 2.18.x -- https://github.com/FasterXML/jackson-modules-java8
+** Jackson-databind; version 2.18.x -- https://github.com/FasterXML/jackson-databind
+** Checker Qual; version 3.49.x --  https://opensource.org/license/mit/
 ** Guava InternalFutureFailureAccess and InternalFutures; version 1.0.1 -- http://www.apache.org/licenses/LICENSE-2.0.txt
 ** J2ObjC Annotations; version 3.0.x -- https://www.apache.org/licenses/LICENSE-2.0.txt
 
