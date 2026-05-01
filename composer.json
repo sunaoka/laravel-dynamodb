@@ -1,47 +1,47 @@
 {
-  "name": "baopham/dynamodb",
-  "description": "Eloquent syntax for DynamoDB",
-  "keywords": [
-    "laravel",
-    "dynamodb",
-    "aws"
-  ],
-  "require": {
-    "php": "^7.1.3 || ^8.0",
-    "aws/aws-sdk-php": "^3.0.0",
-    "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0",
-    "illuminate/database": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0"
-  },
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Bao Pham",
-      "email": "gbaopham@gmail.com"
+    "name": "baopham/dynamodb",
+    "description": "Eloquent syntax for DynamoDB",
+    "keywords": [
+        "laravel",
+        "dynamodb",
+        "aws"
+    ],
+    "require": {
+        "php": "^7.1.3 || ^8.0",
+        "aws/aws-sdk-php": "^3.0.0",
+        "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/database": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bao Pham",
+            "email": "gbaopham@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BaoPham\\DynamoDb\\": "src/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8 || ^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+        "phpunit/phpunit": "^7.5 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.5.12"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "dynamodb_local": "java -Djava.library.path=./DynamoDBLocal_lib -jar dynamodb_local/DynamoDBLocal.jar --port 3000"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BaoPham\\DynamoDb\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BaoPham\\DynamoDb\\DynamoDbServiceProvider"
+            ]
+        }
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "BaoPham\\DynamoDb\\": "src/"
-    }
-  },
-  "require-dev": {
-    "orchestra/testbench": "^3.8 || ^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
-    "phpunit/phpunit": "^7.5 || ^8.0 || ^9.0 || ^10.0 || ^11.0"
-  },
-  "scripts": {
-    "test": "phpunit",
-    "dynamodb_local": "java -Djava.library.path=./DynamoDBLocal_lib -jar dynamodb_local/DynamoDBLocal.jar --port 3000"
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "BaoPham\\DynamoDb\\Tests\\": "tests/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "BaoPham\\DynamoDb\\DynamoDbServiceProvider"
-      ]
-    }
-  }
 }
